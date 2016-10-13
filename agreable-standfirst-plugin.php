@@ -2,7 +2,7 @@
 <?php
 /**
 * @wordpress-plugin
-* Plugin Name: agreable-standfirst-plugin
+* Plugin Name: Agreable Standfirst Plugin
 * Plugin URI: http://github.com/shortlist-digital/agreable-standfirst-plugin
 * Description: Introduces a standfirst field to the post Base Fields
 * Version: 1.0.0
@@ -12,9 +12,20 @@
 */
 class AgreableStandfirstPlugin
 {
-    public function __construct()
-    {
-        //
-    }
+	public function __construct()
+	{
+		add_action('agreable_base_theme_article_basic_acf', array($this, 'register_custom_field'));
+	}
+	public function register_custom_field($acf)
+	{
+		$acf['fields'][] = array (
+			'key' => 'basic_standfirst',
+			'label' => 'Standfirst',
+			'name' => 'standfirst',
+			'type' => 'textarea',
+			'instructions' => 'An introductory paragraph which summarizes the article',
+		);
+		return $acf;
+	}
 }
 new AgreableStandfirstPlugin();
