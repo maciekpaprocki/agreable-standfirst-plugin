@@ -19,11 +19,13 @@ class AgreableStandfirstPlugin
 	public function register_custom_field($acf)
 	{
 		$acf['fields'][] = array (
+			'instructions' => 'An introductory paragraph which summarizes the article',
 			'key' => 'basic_standfirst',
 			'label' => 'Standfirst',
 			'name' => 'standfirst',
-			'type' => 'textarea',
-			'instructions' => 'An introductory paragraph which summarizes the article',
+			'no_return' => true,
+			'simplify' => true,
+			'type' => 'strict_wysiwyg',
 		);
 		return $acf;
 	}
