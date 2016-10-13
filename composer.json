@@ -1,0 +1,13 @@
+{
+    "name": "shortlist-digital/Agreable Standfirst Plugin",
+    "description": "Introduces a standfirst field to the post Base Fields",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shortlist Studio",
+            "email": "hi@shortlist.studio"
+        }
+    ],
+    "require": {}
+}
