@@ -1,5 +1,5 @@
 {
-    "name": "shortlist-digital/Agreable Standfirst Plugin",
+    "name": "shortlist-digital/agreable-standfirst-plugin",
     "description": "Introduces a standfirst field to the post Base Fields",
     "type": "wordpress-plugin",
     "license": "MIT",
